@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>bg.technologies</groupId>
-    <artifactId>pathfinder-app</artifactId>
+    <artifactId>friends-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>pathfinder-app</name>
     <description>pathfinder-app</description>

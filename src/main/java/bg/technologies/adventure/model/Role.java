@@ -1,4 +1,4 @@
-package bg.technologies.pathfinderapp.model;
+package bg.technologies.adventure.model;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,6 +10,7 @@ public class Role {
     private Long id;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private UserRoles name;
 
     public Role() {

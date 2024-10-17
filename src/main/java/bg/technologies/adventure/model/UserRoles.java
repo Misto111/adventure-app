@@ -1,4 +1,4 @@
-package bg.technologies.pathfinderapp.model;
+package bg.technologies.adventure.model;
 
 public enum UserRoles {
     USER, MODERATOR, ADMIN
