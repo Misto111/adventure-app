@@ -1,10 +1,13 @@
 package bg.technologies.adventure.service;
 
-import bg.technologies.adventure.models.User;
+import bg.technologies.adventure.models.dto.UserLoginDTO;
+import bg.technologies.adventure.models.dto.UserRegisterDTO;
 
-import java.util.List;
+
 
 public interface UserService {
 
-    public List<User> getAll();
+   void register(UserRegisterDTO userRegisterDTO);
+
+   boolean login(UserLoginDTO userLoginDTO);
 }
