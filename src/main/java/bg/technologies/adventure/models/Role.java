@@ -1,4 +1,5 @@
-package bg.technologies.adventure.model;
+package bg.technologies.adventure.models;
+import bg.technologies.adventure.models.enums.UserRolesEnum;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,7 +12,7 @@ public class Role {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private UserRoles name;
+    private UserRolesEnum name;
 
     public Role() {
     }
@@ -25,11 +26,11 @@ public class Role {
         return this;
     }
 
-    public UserRoles getName() {
+    public UserRolesEnum getName() {
         return name;
     }
 
-    public Role setName(UserRoles name) {
+    public Role setName(UserRolesEnum name) {
         this.name = name;
         return this;
     }

@@ -1,7 +1,9 @@
-package bg.technologies.adventure.model;
+package bg.technologies.adventure.models;
 
+import bg.technologies.adventure.models.enums.LevelEnum;
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -13,30 +15,34 @@ public class User {
     @Column(nullable = false)
     private Long id;
 
-    @Column(name = "username")
+    @Column(name = "age")
+    private int age;
+
+    @Column(name = "username", nullable = false, unique = true)
     private String username;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "full-name")
+    @Column(name = "full_name")
     private String fullName;
 
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     private String email;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "users_roles",
             joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")}
+            inverseJoinColumns = {@JoinColumn(name = "roles_id", referencedColumnName = "id")}
     )
-    private Set<Role> role;
+    private Set<Role> roles;
 
     @Enumerated(EnumType.STRING)
-    private Level level;
+    private LevelEnum level;
 
     public User() {
+        this.roles = new HashSet<>();
     }
 
     public Long getId() {
@@ -84,21 +90,30 @@ public class User {
         return this;
     }
 
-    public Set<Role> getRole() {
-        return role;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-    public User setRole(Set<Role> role) {
-        this.role = role;
+    public User setRoles(Set<Role> role) {
+        this.roles = role;
         return this;
     }
 
-    public Level getLevel() {
+    public LevelEnum getLevel() {
         return level;
     }
 
-    public User setLevel(Level level) {
+    public User setLevel(LevelEnum level) {
         this.level = level;
+        return this;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public User setAge(int age) {
+        this.age = age;
         return this;
     }
 }
