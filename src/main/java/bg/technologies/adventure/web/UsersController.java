@@ -1,5 +1,4 @@
 package bg.technologies.adventure.web;
-
 import bg.technologies.adventure.models.dto.UserLoginDTO;
 import bg.technologies.adventure.models.dto.UserRegisterDTO;
 import bg.technologies.adventure.service.UserService;
