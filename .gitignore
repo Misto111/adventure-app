@@ -4,8 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-# Скрити конфигурационни файлове
-application.yaml
+
 
 ### STS ###
 .apt_generated
