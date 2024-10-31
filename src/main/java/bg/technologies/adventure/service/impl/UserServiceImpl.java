@@ -49,7 +49,15 @@ public class UserServiceImpl implements UserService {
         loggedUser.setUsername(user.getUsername());
         loggedUser.setEmail(user.getEmail());
         loggedUser.setFullName(user.getFullName());
+        loggedUser.setLogged(true);
 
         return passwordMatch;
+    }
+
+    @Override
+    public void logout() {
+    loggedUser.reset();
+
+
     }
 }

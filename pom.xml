@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>bg.technologies</groupId>
-    <artifactId>friends-app</artifactId>
+    <artifactId>adventure-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>adventure-app</name>
     <description>adventure-app</description>
